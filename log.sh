@@ -18,19 +18,19 @@ readonly _LOG_INFO='[*]'
 readonly _LOG_WARNING='[!]'
 readonly _LOG_ERROR='[x]'
 
-logx () {
+_logx () {
     local level="$1" ; shift
     printf '%s %s\n' "$level" "$*"
 }
 
 logi () {
-    logx "$_LOG_INFO" "$@"
+    _logx "$_LOG_INFO" "$@"
 }
 
 logw () {
-    logx "$_LOG_WARNING" "$@"
+    _logx "$_LOG_WARNING" "$@"
 }
 
 loge () {
-    logx "$_LOG_ERROR" "$@"
+    _logx "$_LOG_ERROR" "$@"
 }
